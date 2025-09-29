@@ -1,7 +1,23 @@
+import List from "@/components/List";
+import ListItem, { ListItemProps } from "@/components/ListItem";
 import { Text, View } from "react-native";
 
-export default function Index() {
-  return (
+const pokemonData = [
+  {
+    name: "Pikachu",
+    url: "",
+  },
+  {
+    name: "Pikachu2",
+    url: "",
+  },
+  {
+    name: "Pikachu3",
+    url: "",
+  }
+];
+
+const Index= () => (
     <View
       style={{
         flex: 1,
@@ -9,7 +25,8 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <List items={pokemonData}/>
     </View>
   );
-}
+
+export default Index;
